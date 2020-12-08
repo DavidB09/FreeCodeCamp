@@ -1,0 +1,114 @@
+/* Main - Home Page*/
+
+html {
+    font-size: 62.5%; 
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0; 
+    font-size: 2rem; 
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+
+#navbar-main ul {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    padding: 0; 
+    margin: 0; 
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #1db8cf;
+    border-bottom: 0.5rem solid #ccdee0; 
+}
+
+#navbar-main ul li {
+    float: left;
+}
+  
+#navbar-main ul li a {
+    display: flex; 
+    align-items: center;
+    margin-left: 2.5rem; 
+    margin-right: 2.5rem; 
+    height: 7vh; 
+    font-size: 2.5rem; 
+    color: #f2f9fa;
+    text-decoration: none;
+}
+
+#navbar-main ul li:hover {
+    background-color: #141426;
+    transition: background-color 0.6s;
+}
+
+/* Header/Welcome Section */ 
+
+#welcome-section {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    background-image: linear-gradient(55deg, #3a3d40 0%, #000 100%);
+}
+
+#welcome-section h1 {
+    display: flex; 
+    align-items: center; 
+    font-size: 7rem; 
+    color: #f2f9fa; 
+}
+
+#welcome-section h1 img {
+    width: 35rem; 
+    height: auto; 
+    padding: 2rem; 
+}
+
+/* Main Content/Project Section */
+
+#project-section {
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; 
+    align-items: center;
+    background-color: #141426; 
+}
+
+#project-section h2 {
+    color: #f2f9fa; 
+    font-size: 4rem; 
+    margin-top: 30rem; 
+}
+
+#project-links {
+    display: flex; 
+    flex-direction: row; 
+}
+
+#project-links section {
+    background-color: #1db8cf; 
+    margin: 15rem 5rem 0 5rem; 
+    padding: 2rem; 
+    text-align: center; 
+}
+
+#project-links section a {
+    text-decoration: none;
+}
+
+.comment-code {
+    color: #1db8cf; 
+}
+
+#project-links section a:hover .comment-code {
+    color: #ff7f50;
+    transition: color 0.4s; 
+  }
+
+
