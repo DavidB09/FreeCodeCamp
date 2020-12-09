@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="FreeCodeCamp_CSS_HTML-CSSPage.css">
+    <title>FreeCodeCamp Portfolio - HTML/CSS Page</title>
 </head>
-<body style="background-color: red; ">
+
+<body>
+
+    <header>
+
+        <div id="logo-div">
+            <img src="Assets/HTML5 Logo.png" alt="HTML5 Logo">
+
+            <img src="Assets/CSS3 Logo.png" alt="CSS3 Logo">
+        </div>
+
+        <h1>Portfolio</h1>
+
+        <div id="dropdown-div">
+            <button onclick="toggleFunction()" id="dropdown-button">Jump To <a href="javascript:toggleFunction2" id="arrow" class="arrow-right"></a></button>
+                <div id="dropdown-content-div" class="dropdown-content">
+                    <a href="#">Basic HTML and HTML5</a>
+                </div>
+        </div>
+    </header>
+   
     
 </body>
+
+<script type="text/javascript" src="FreeCodeCamp_JS_HTML-CSSPage.js"></script>
+
 </html>
