@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Website Page</title>
+</head>
+
+<body>
+    
+    <header>
+        <h1>CatPhotoApp</h1>
+    </header>
+
+    <main>
+
+        <a href="https://bit.ly/fcc-relaxing-cat" target="_blank"><img src="https://bit.ly/fcc-relaxing-cat" alt="A relaxing cat" title="Relaxing Cat"></a>
+
+        <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>!</p>
+
+        <div>
+        <p>Three things cats love:</p>
+            <ul>
+                <li>Cat Nip</li>
+                <li>Petting Hour</li>
+                <li>Lasagna</li>
+            </ul>
+        </div>
+
+        <div>
+            <p>Three things cat despise:</p>
+            <ol>
+                <li>Swimming Pools</li>
+                <li>Thunder</li>
+                <li>Flea Treatment</li>
+            </ol>
+        </div>
+        
+
+        <form action="/url-where-you-want-to-submit-form-data">
+            <label for="indoor">
+                <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
+            </label>
+
+            <label for="outdoor">
+                <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+            </label>
+
+            <label for="loving">
+                <input id="loving" value="loving" type="checkbox" name="personality" checked>Loving
+            </label>
+
+            <label for="energetic">
+                <input id="energetic" value="energetic" type="checkbox" name="personality">Energetic
+            </label>
+
+            <label for="grumpy">
+                <input id="grumpy" value="grumpy" type="checkbox" name="personality">Grumpy
+            </label>
+
+            <input type="text" placeholder="Cat Photo URL" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </main>
+
+</body>
+
+</html>
