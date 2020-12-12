@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheep Animation</title>
+    <meta name="author" content="David Brunner">
+    <meta name="description" content="Sheep animation using pure css">
+
+    <style>
+        body {
+            background:#c6faf1;
+        }
+
+        .sheep {
+            position: relative; 
+            margin: auto; 
+            margin-top: 15%; 
+            width: 300px; 
+            height: 300px; 
+            display: block; 
+        }
+
+        .sheep * {
+            position: absolute;
+        }
+
+        .sheep-head {
+            background: #f6e0ce;
+            top: 28%; 
+            left: 60%;
+            width: 30%; 
+            height: 40%; 
+            z-index: 1;
+            border-radius: 45%; 
+            transform: rotate(350deg); 
+        }
+
+        .head-wool-1 {
+            background: white;
+            bottom: 70%;
+            left: 0%;
+            width: 60%; 
+            height: 35%; 
+            border-radius: 45%; 
+            z-index: 3;
+            transform: rotate(10deg); 
+            border-top: solid 2px black;
+        }
+
+        .head-wool-2 {
+            background: white;
+            bottom: 69%;
+            right: 0%;
+            width: 53%; 
+            height: 33%; 
+            border-radius: 45%; 
+            z-index: 3;
+            transform: rotate(10deg); 
+            border-top: solid 2px black;
+        }
+
+        .ear-1 {
+            background: #f6e0ce;
+            top: 0%;
+            right: 80%;
+            width: 60%; 
+            height: 20%; 
+            border-radius: 80%; 
+            z-index: 2; 
+            transform: rotate(30deg); 
+        }
+
+        .ear-2 {
+            background: #f6e0ce;
+            top: 5%;
+            left: 70%;
+            width: 60%; 
+            height: 20%; 
+            border-radius: 80%; 
+            z-index: 2; 
+            transform: rotate(340deg); 
+        }
+
+        .eye-1 {
+            background: #f6e0ce;
+            top: 40%;
+            left: 20%;
+            width: 30%; 
+            height: 20%; 
+            border-radius: 80%; 
+            z-index: 4; 
+            border-top: solid 4px black;
+        }
+
+        .eye-2 {
+            background: #f6e0ce;
+            top: 40%;
+            left: 60%;
+            width: 30%; 
+            height: 20%; 
+            border-radius: 80%; 
+            z-index: 4; 
+            border-top: solid 4px black;
+        }
+
+        .nose-1 {
+            background: #f6e0ce;
+            top: 80%;
+            left: 30%;
+            width: 25%; 
+            height: 5%; 
+            border-radius: 30%; 
+            z-index: 4; 
+            border-bottom: solid 3px black;
+            transform: rotate(20deg);
+        }
+
+        .nose-2 {
+            background: #f6e0ce;
+            top: 80%;
+            left: 55%;
+            width: 25%; 
+            height: 5%; 
+            border-radius: 30%; 
+            z-index: 4; 
+            border-bottom: solid 3px black;
+            transform: rotate(340deg);
+        }
+
+        .nose-3 {
+            background: #f6e0ce;
+            top: 88%;
+            left: 52%;
+            width: 0%; 
+            height: 12%; 
+            border-radius: 30%; 
+            z-index: 4; 
+            border-left: solid 3px black;
+            transform: rotate(10deg);
+        }
+
+        .sheep-body {
+            background: white;
+            top: 25%; 
+            width: 80%; 
+            height: 40%;
+            border-radius: 40%;
+        }
+
+        .tail {
+            background: white; 
+            top: 35%;
+            right: 90%;
+            width: 30%; 
+            height: 20%; 
+            transform: rotate(140deg);
+            border-radius: 90%; 
+            border: solid 2px black; 
+        }
+
+        .wool-1 {
+            background: white; 
+            bottom: 55%; 
+            left: 8%;
+            width: 20%; 
+            height: 50%; 
+            transform: rotate(330deg);
+            border-radius: 90%; 
+            border-top: solid 2px black; 
+        }
+
+        .wool-2 {
+            background: white; 
+            bottom: 73%;
+            left: 20%;
+            width: 30%; 
+            height: 40%; 
+            border-radius: 90%; 
+            border-top: solid 2px black; 
+        }
+
+        .wool-3 {
+            background: white; 
+            bottom: 75%;
+            left: 40%;
+            width: 35%; 
+            height: 40%; 
+            border-radius: 90%; 
+            border-top: solid 2px black; 
+        }
+
+        .wool-4 {
+            background: white; 
+            bottom: 68%;
+            left: 68%;
+            width: 25%; 
+            height: 40%; 
+            transform: rotate(20deg);
+            border-radius: 90%; 
+            border-top: solid 2px black; 
+        }
+
+        .wool-5 {
+            background: white; 
+            top: 65%;
+            left: 60%;
+            width: 25%; 
+            height: 40%; 
+            border-radius: 90%; 
+            border-bottom: solid 2px black; 
+        }
+
+        .wool-6 {
+            background: white; 
+            top: 68%;
+            left: 40%;
+            width: 25%; 
+            height: 40%; 
+            border-radius: 90%; 
+            border-bottom: solid 2px black; 
+        }
+
+        .wool-7 {
+            background: white; 
+            top: 68%;
+            left: 20%;
+            width: 30%; 
+            height: 40%; 
+            transform: rotate(10deg);
+            border-radius: 90%; 
+            border-bottom: solid 2px black; 
+        }
+
+        .wool-8 {
+            background: white; 
+            top: 60%;
+            left: 5%;
+            width: 25%; 
+            height: 40%; 
+            transform: rotate(20deg);
+            border-radius: 90%; 
+            border-bottom: solid 2px black; 
+        }
+
+        .wool-9 {
+            background: white; 
+            top: 40%;
+            right: 80%;
+            width: 25%; 
+            height: 40%; 
+            transform: rotate(70deg);
+            border-radius: 90%; 
+            border-bottom: solid 2px black; 
+        }
+
+        .wool-10 {
+            background: white; 
+            top: 10%;
+            right: 83%;
+            width: 20%; 
+            height: 40%; 
+            transform: rotate(110deg);
+            border-radius: 90%; 
+            border-bottom: solid 2px black; 
+        }
+
+        .leg-1 {
+            background: #f6e0ce; 
+            top: 80%;
+            right: 25%;
+            width: 7%; 
+            height: 80%; 
+            border-radius: 20%; 
+            border-bottom: solid 5px black; 
+        }
+
+        .sheep:hover .leg-1{
+            animation-duration: 2s;
+            animation-name: walk-1;
+            transform-origin: top center;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes walk-1 {
+            25% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(0deg); 
+            }
+
+            75% {
+                transform: rotate(-30deg);
+            }
+        }
+
+        .leg-2 {
+            background: #f6e0ce; 
+            top: 80%;
+            right: 25%;
+            width: 7%; 
+            height: 80%; 
+            border-radius: 20%; 
+            border-bottom: solid 5px black; 
+        }
+
+        .sheep:hover .leg-2{
+            animation-duration: 2s;
+            animation-name: walk-2;
+            transform-origin: top center;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes walk-2 {
+            25% {
+                transform: rotate(-30deg);
+            }
+
+            50% {
+                transform: rotate(0deg); 
+            }
+
+            75% {
+                transform: rotate(30deg);
+            }
+        }
+
+        .leg-3 {
+            background: #f6e0ce; 
+            top: 80%;
+            right: 75%;
+            width: 7%; 
+            height: 80%; 
+            border-radius: 20%; 
+            border-bottom: solid 5px black; 
+        }
+
+        .sheep:hover .leg-3{
+            animation-duration: 2s;
+            animation-name: walk-3;
+            transform-origin: top center;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes walk-3 {
+            25% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(0deg); 
+            }
+
+            75% {
+                transform: rotate(-30deg);
+            }
+        }
+
+        .leg-4 {
+            background: #f6e0ce; 
+            top: 80%;
+            right: 75%;
+            width: 7%; 
+            height: 80%; 
+            border-radius: 20%; 
+            border-bottom: solid 5px black; 
+        }
+
+        .sheep:hover .leg-4{
+            animation-duration: 2s;
+            animation-name: walk-4;
+            transform-origin: top center;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes walk-4 {
+            25% {
+                transform: rotate(-30deg);
+            }
+
+            50% {
+                transform: rotate(0deg); 
+            }
+
+            75% {
+                transform: rotate(30deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="sheep">
+        <div class="sheep-head">
+            <div class="head-wool-1"></div>
+            <div class="head-wool-2"></div>
+            <div class="ear-1"></div>
+            <div class="ear-2"></div>
+            <div class="eye-1"></div>
+            <div class="eye-2"></div>
+            <div class="nose-1"></div>
+            <div class="nose-2"></div>
+            <div class="nose-3"></div>
+        </div>
+        
+        <div class="sheep-body">
+            <div class="tail"></div>
+            <div class="leg-1"></div>
+            <div class="leg-2"></div>
+            <div class="leg-3"></div>
+            <div class="leg-4"></div>
+            <div class="wool-1"></div>
+            <div class="wool-2"></div>
+            <div class="wool-3"></div>
+            <div class="wool-4"></div>
+            <div class="wool-5"></div>
+            <div class="wool-6"></div>
+            <div class="wool-7"></div>
+            <div class="wool-8"></div>
+            <div class="wool-9"></div>
+            <div class="wool-10"></div>
+            
+        </div>
+
+
+    </div>
+</body>
+
+</html>
