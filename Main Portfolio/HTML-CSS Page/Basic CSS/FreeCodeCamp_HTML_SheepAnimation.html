@@ -9,17 +9,35 @@
     <meta name="description" content="Sheep animation using pure css">
 
     <style>
+
+        :root {
+            --sheep-size: 300px;
+            --wool-color: white;
+            --sheep-color: #f6e0ce;
+        }
+
+        @media (max-width: 350px) {
+            :root {
+                --sheep-size: 150px;
+            }
+        }
+
         body {
             background:#c6faf1;
         }
 
         .sheep {
-            position: relative; 
-            margin: auto; 
-            margin-top: 15%; 
-            width: 300px; 
-            height: 300px; 
             display: block; 
+            position: relative; 
+            height: var(--sheep-size); 
+            width: var(--sheep-size); 
+            margin: 15% auto; 
+        }
+
+        @media (max-width: 350px) {
+            .sheep {
+                margin: 0 auto;
+            }
         }
 
         .sheep * {
@@ -27,258 +45,259 @@
         }
 
         .sheep-head {
-            background: #f6e0ce;
             top: 28%; 
             left: 60%;
+            height: 40%;
             width: 30%; 
-            height: 40%; 
             z-index: 1;
+            background: var(--sheep-color);
             border-radius: 45%; 
             transform: rotate(350deg); 
         }
 
         .head-wool-1 {
-            background: white;
             bottom: 70%;
             left: 0%;
-            width: 60%; 
             height: 35%; 
-            border-radius: 45%; 
+            width: 60%; 
             z-index: 3;
-            transform: rotate(10deg); 
+            background: var(--wool-color);
+            border-radius: 45%; 
             border-top: solid 2px black;
+            transform: rotate(10deg); 
         }
 
         .head-wool-2 {
-            background: white;
             bottom: 69%;
             right: 0%;
+            height: 33%;
             width: 53%; 
-            height: 33%; 
-            border-radius: 45%; 
             z-index: 3;
-            transform: rotate(10deg); 
+            background: var(--wool-color);
+            border-radius: 45%; 
             border-top: solid 2px black;
+            transform: rotate(10deg); 
         }
 
         .ear-1 {
-            background: #f6e0ce;
             top: 0%;
             right: 80%;
+            height: 20%;
             width: 60%; 
-            height: 20%; 
-            border-radius: 80%; 
             z-index: 2; 
+            background: var(--sheep-color);
+            border-radius: 80%; 
             transform: rotate(30deg); 
         }
 
         .ear-2 {
-            background: #f6e0ce;
             top: 5%;
             left: 70%;
+            height: 20%;
             width: 60%; 
-            height: 20%; 
-            border-radius: 80%; 
             z-index: 2; 
+            background: var(--sheep-color);
+            border-radius: 80%; 
             transform: rotate(340deg); 
         }
 
         .eye-1 {
-            background: #f6e0ce;
             top: 40%;
             left: 20%;
+            height: 20%;
             width: 30%; 
-            height: 20%; 
+            z-index: 4;
+            background: var(--sheep-color);
             border-radius: 80%; 
-            z-index: 4; 
             border-top: solid 4px black;
         }
 
         .eye-2 {
-            background: #f6e0ce;
+            
             top: 40%;
             left: 60%;
-            width: 30%; 
             height: 20%; 
-            border-radius: 80%; 
-            z-index: 4; 
+            width: 30%; 
+            z-index: 4;
+            background: var(--sheep-color);
+            border-radius: 80%;
             border-top: solid 4px black;
         }
 
         .nose-1 {
-            background: #f6e0ce;
             top: 80%;
             left: 30%;
-            width: 25%; 
             height: 5%; 
-            border-radius: 30%; 
+            width: 25%; 
             z-index: 4; 
+            background: var(--sheep-color);
+            border-radius: 30%; 
             border-bottom: solid 3px black;
             transform: rotate(20deg);
         }
 
         .nose-2 {
-            background: #f6e0ce;
             top: 80%;
             left: 55%;
-            width: 25%; 
             height: 5%; 
-            border-radius: 30%; 
+            width: 25%; 
             z-index: 4; 
+            background: var(--sheep-color);
+            border-radius: 30%; 
             border-bottom: solid 3px black;
             transform: rotate(340deg);
         }
 
         .nose-3 {
-            background: #f6e0ce;
             top: 88%;
             left: 52%;
+            height: 12%;
             width: 0%; 
-            height: 12%; 
+            z-index: 4;
+            background: var(--sheep-color);
             border-radius: 30%; 
-            z-index: 4; 
             border-left: solid 3px black;
             transform: rotate(10deg);
         }
 
         .sheep-body {
-            background: white;
+            background: var(--wool-color);
             top: 25%; 
-            width: 80%; 
             height: 40%;
+            width: 80%; 
             border-radius: 40%;
         }
 
         .tail {
-            background: white; 
             top: 35%;
             right: 90%;
+            height: 20%;
             width: 30%; 
-            height: 20%; 
-            transform: rotate(140deg);
+            background: var(--wool-color); 
             border-radius: 90%; 
             border: solid 2px black; 
+            transform: rotate(140deg);
         }
 
         .wool-1 {
-            background: white; 
             bottom: 55%; 
             left: 8%;
-            width: 20%; 
             height: 50%; 
-            transform: rotate(330deg);
+            width: 20%; 
+            background: var(--wool-color); 
             border-radius: 90%; 
             border-top: solid 2px black; 
+            transform: rotate(330deg);
         }
 
         .wool-2 {
-            background: white; 
             bottom: 73%;
             left: 20%;
-            width: 30%; 
             height: 40%; 
+            width: 30%; 
+            background: var(--wool-color); 
             border-radius: 90%; 
             border-top: solid 2px black; 
         }
 
         .wool-3 {
-            background: white; 
             bottom: 75%;
             left: 40%;
-            width: 35%; 
             height: 40%; 
+            width: 35%; 
+            background: var(--wool-color); 
             border-radius: 90%; 
             border-top: solid 2px black; 
         }
 
         .wool-4 {
-            background: white; 
             bottom: 68%;
             left: 68%;
-            width: 25%; 
             height: 40%; 
-            transform: rotate(20deg);
+            width: 25%; 
+            background: var(--wool-color);  
             border-radius: 90%; 
             border-top: solid 2px black; 
+            transform: rotate(20deg);
         }
 
         .wool-5 {
-            background: white; 
             top: 65%;
             left: 60%;
-            width: 25%; 
             height: 40%; 
+            width: 25%; 
+            background: var(--wool-color); 
             border-radius: 90%; 
             border-bottom: solid 2px black; 
         }
 
         .wool-6 {
-            background: white; 
             top: 68%;
             left: 40%;
+            height: 40%;
             width: 25%; 
-            height: 40%; 
+            background: var(--wool-color);  
             border-radius: 90%; 
             border-bottom: solid 2px black; 
         }
 
         .wool-7 {
-            background: white; 
             top: 68%;
             left: 20%;
+            height: 40%;
             width: 30%; 
-            height: 40%; 
-            transform: rotate(10deg);
+            background: var(--wool-color);  
             border-radius: 90%; 
             border-bottom: solid 2px black; 
+            transform: rotate(10deg);
         }
 
         .wool-8 {
-            background: white; 
             top: 60%;
             left: 5%;
+            height: 40%;
             width: 25%; 
-            height: 40%; 
-            transform: rotate(20deg);
+            background: var(--wool-color);  
             border-radius: 90%; 
             border-bottom: solid 2px black; 
+            transform: rotate(20deg);
         }
 
         .wool-9 {
-            background: white; 
             top: 40%;
             right: 80%;
-            width: 25%; 
             height: 40%; 
-            transform: rotate(70deg);
+            width: 25%; 
+            background: var(--wool-color); 
             border-radius: 90%; 
             border-bottom: solid 2px black; 
+            transform: rotate(70deg);
         }
 
         .wool-10 {
-            background: white; 
             top: 10%;
             right: 83%;
+            height: 40%;
             width: 20%; 
-            height: 40%; 
-            transform: rotate(110deg);
+            background: var(--wool-color);  
             border-radius: 90%; 
             border-bottom: solid 2px black; 
+            transform: rotate(110deg);
         }
 
         .leg-1 {
-            background: #f6e0ce; 
             top: 80%;
             right: 25%;
-            width: 7%; 
             height: 80%; 
+            width: 7%; 
+            background: var(--sheep-color); 
             border-radius: 20%; 
             border-bottom: solid 5px black; 
         }
 
         .sheep:hover .leg-1{
-            animation-duration: 2s;
             animation-name: walk-1;
+            animation-duration: 2s;
             transform-origin: top center;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
@@ -299,18 +318,18 @@
         }
 
         .leg-2 {
-            background: #f6e0ce; 
             top: 80%;
             right: 25%;
+            height: 80%;
             width: 7%; 
-            height: 80%; 
+            background: var(--sheep-color);  
             border-radius: 20%; 
             border-bottom: solid 5px black; 
         }
 
         .sheep:hover .leg-2{
-            animation-duration: 2s;
             animation-name: walk-2;
+            animation-duration: 2s;
             transform-origin: top center;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
@@ -331,18 +350,18 @@
         }
 
         .leg-3 {
-            background: #f6e0ce; 
             top: 80%;
             right: 75%;
+            height: 80%;
             width: 7%; 
-            height: 80%; 
+            background: var(--sheep-color);  
             border-radius: 20%; 
             border-bottom: solid 5px black; 
         }
 
         .sheep:hover .leg-3{
-            animation-duration: 2s;
             animation-name: walk-3;
+            animation-duration: 2s;
             transform-origin: top center;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
@@ -363,18 +382,18 @@
         }
 
         .leg-4 {
-            background: #f6e0ce; 
             top: 80%;
             right: 75%;
-            width: 7%; 
             height: 80%; 
+            width: 7%; 
+            background: var(--sheep-color); 
             border-radius: 20%; 
             border-bottom: solid 5px black; 
         }
 
-        .sheep:hover .leg-4{
-            animation-duration: 2s;
+        .sheep:hover .leg-4 {
             animation-name: walk-4;
+            animation-duration: 2s;
             transform-origin: top center;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
@@ -428,7 +447,6 @@
             <div class="wool-8"></div>
             <div class="wool-9"></div>
             <div class="wool-10"></div>
-            
         </div>
 
 
