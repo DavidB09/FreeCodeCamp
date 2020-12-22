@@ -175,7 +175,7 @@ footer a:visited {
   
 .circle-year h3 {
     position: relative; 
-    bottom: 1rem;
+    bottom: 2rem;
 }
   
 /* IDS */ 
@@ -202,9 +202,9 @@ footer a:visited {
     display: flex; 
     flex-direction: column; 
 }
-  
-#date-2 {
-    margin-bottom: 1rem; 
+
+#two-years h3 {
+    margin-bottom: 0rem; 
 }
   
 /* Individual Circles */
