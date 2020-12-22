@@ -1,0 +1,334 @@
+html {
+    font-size: 62.5%; 
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+  
+/* MAIN ELEMENTS */
+  
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    color: #a7a798;
+    background-color: #003891;
+    font-family: Florence;
+    font-size: 1.5rem;
+    text-align: center;
+}
+  
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+  
+figure {
+    display: flex; 
+    justify-content: center; 
+}
+  
+img {
+    position: relative;
+    height: auto;
+    width: 65%; 
+    margin: auto;
+    border: outset gray 1rem;
+    border-radius: 5%;
+}
+  
+figcaption {
+    padding-top: 0.5rem;
+    color: #373638;
+    font-size: 2rem;
+}
+  
+blockquote {
+    display: flex; 
+    flex-direction: column; 
+    width: 50rem;
+    margin: 0 auto 4rem auto;
+    padding: 1rem; 
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+}
+  
+h1 {
+    margin-top: 2rem;
+    font-size: 4rem;
+}
+  
+h2 {
+    margin: 0; 
+    font-family: Brush Script MT;
+    font-size: 10rem;
+}
+  
+h3 {
+    font-size: 3rem; 
+}
+  
+footer p {
+    padding-bottom: 8rem;
+    font-size: 1.8rem; 
+}
+  
+footer a {
+    color: #ff0000;
+    text-decoration: none; 
+}
+  
+footer a:visited {
+    color: #da5b33;
+}
+  
+/* CLASSES */
+  
+.header-p {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-p a {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 1.5rem; 
+}
+
+.header-p a::before {
+    content: " ("; 
+    color: #a7a798;
+}
+
+.header-p a::after {
+    content: " to hear music)"; 
+    color: #a7a798;
+}
+  
+.circle {
+    height: 200px;
+    width: 300px;
+    background-color: transparent; 
+    perspective: 1000px;
+}
+  
+.circle-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.circle:hover .circle-inner {
+    transform: rotateY(180deg);
+}
+  
+/* Source Code for amazing vinyl record design is from Ana Tudor */
+/* Link: https://codepen.io/thebabydino/pen/HjJlL */
+  
+.circle-front, .circle-back {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #d9d9ce; 
+    background: repeating-radial-gradient(#141212, #141212 24px, #21201f 26px);
+    background-size: 100% 100%; 
+    text-align: center; 
+    border-radius: 50%; 
+    backface-visibility: hidden;
+}
+  
+.circle-front {
+    padding: 1rem; 
+    font-size: 3rem; 
+}
+  
+.circle-back {
+    padding: 1.5rem; 
+    font-size: 1.5rem; 
+    transform: rotateY(180deg);
+}
+  
+.circle-year {
+    display: flex; 
+    justify-content: center; 
+    height: 12rem;
+    width: 12rem;
+    background: #b5ac9a;
+    box-shadow: 0 0 0 0.5rem #da5b33,
+      inset 0 0 0 5.3rem #da5b33;
+    border: solid 1px #d9a388;
+    border-radius: 50%;
+}
+  
+.circle-year h3 {
+    position: relative; 
+    bottom: 1rem;
+}
+  
+/* IDS */ 
+  
+#img-background {
+    width: 1200px; 
+    padding: 25px;
+    background-image: url("Assets/Wood\ Background.jpg");
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    background-position: center;
+    border-radius: 2%; 
+}
+  
+#tribute-info {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: repeat(14, 1fr); 
+    width: 100%;
+    padding: 1.7rem 0 7.5rem 0 ; 
+}
+  
+#two-years {
+    display: flex; 
+    flex-direction: column; 
+}
+  
+#date-2 {
+    margin-bottom: 1rem; 
+}
+  
+/* Individual Circles */
+#circle-1 {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    height: 20rem;
+    width: 20rem;
+}
+  
+#circle-2 {
+    grid-column: 2;
+    grid-row: 2;
+    height: 20.5rem;
+    width: 20.5rem;
+}
+  
+#circle-3 {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: end;
+    height: 20rem;
+    width: 20rem;
+}
+  
+#circle-4 {
+    grid-column: 2;
+    grid-row: 4;
+    height: 20.5rem;
+    width: 20.5rem;
+}
+  
+#circle-5 {
+    grid-column: 1;
+    grid-row: 5;
+    justify-self: end;
+    height: 20rem;
+    width: 20.2rem;
+}
+  
+#circle-6 {
+    grid-column: 2;
+    grid-row: 6;
+    height: 20rem;
+    width: 20rem;
+}
+  
+#circle-7 {
+    grid-column: 1;
+    grid-row: 7;
+    justify-self: end;
+    height: 22.5rem;
+    width: 22.5rem;
+}
+  
+#circle-8 {
+    grid-column: 2;
+    grid-row: 8;
+    height: 19rem;
+    width: 19rem;
+}
+  
+#circle-9 {
+    grid-column: 1;
+    grid-row: 9;
+    justify-self: end;
+    height: 19rem;
+    width: 19rem;
+}
+  
+#circle-10 {
+    grid-column: 2;
+    grid-row: 10;
+    height: 20rem;
+    width: 20rem;
+}
+  
+#circle-11 {
+    grid-column: 1;
+    grid-row: 11;
+    justify-self: end;
+    height: 22rem;
+    width: 22rem;
+}
+  
+#circle-12 {
+    grid-column: 2;
+    grid-row: 12;
+    height: 18rem;
+    width: 18rem;
+}
+  
+#circle-13 {
+    grid-column: 1;
+    grid-row: 13;
+    justify-self: end;
+    height: 20rem;
+    width: 20rem;
+}
+  
+#circle-14 {
+    grid-column: 2;
+    grid-row: 14;
+    height: 20rem;
+    width: 20rem;
+}
+  
+/* MEDIA QUERY */ 
+  
+@media (max-width: 450px) {
+    html {
+      font-size: 50%; 
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    #tribute-info {
+      display: flex; 
+      flex-direction: column;  
+      align-items: center; 
+    }
+    
+    .circle {
+      padding-bottom: 5rem; 
+    }
+}
