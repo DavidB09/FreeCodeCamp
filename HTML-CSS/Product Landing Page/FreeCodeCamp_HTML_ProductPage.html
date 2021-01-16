@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FreeCodeCamp_CSS_ProductPage.css">
+    <title>Product Landing Page</title>
+    <meta name="author" content="David Brunner">
+    <meta name="keywords" content="Guitar, Repair, Construction">
+    <meta name="description" content="A product landing page for guitar work.">
+</head>
+
+<body>
+  
+    <header>
+
+    <nav>
+      <ul>
+        <li><a href="#form-container">Services</a></li>
+        <li><a href="#iframe-container">Video</a></li>
+        <li>
+          <a href="#top">
+            <img id="header-img" src="Assets/Jimi's Guitar Shop Logo.png" alt="Jimi's Guitar logo">
+          </a>
+          <h1> Jimi's Guitar Shop </h1>
+        </li>
+        <li><a href="#prices-container">Prices</a></li>
+        <li><a href="https://www.google.com/maps?ll=44.412264,-110.723184&z=6&t=m&hl=en&gl=US&mapclient=embed&q=Yellowstone+Caldera+Wyoming+82190" target="_blank">Location</a></li>
+    </nav>
+
+    </header>
+
+    <main>
+
+        <section id="form-container">
+            <h2>Reliable Guitar Work</h2>
+            <form action="https://www.freecodecamp.com/email-submit">
+                <input id="email-input" name="personal-email" type="email" placeholder="Enter your email" required>
+                <button id="submit-button" type="submit">Let's Get Started!</button>
+            </form>
+        </section>
+
+        <section id="services-container">
+            <div class="services-description">
+                <img class="services-image" src="Assets/Set-Up Picture.jpg" alt="Set-up picture"/>
+                <h3>Guitar Set-up</h3>
+                <p>We will perfectly set up your guitar to your needs.</p>
+            </div>
+
+            <div class="services-description">
+                <img class="services-image" src="Assets/Repair Picture.jpg" alt="Repair picture"/>
+                <h3>Guitar Repair</h3>
+                <p>We will replace and repair any broken pieces of your guitar</p>
+            </div>
+
+            <div class="services-description">
+                <img class="services-image" src="Assets/Custom Picture.jpg" alt="Build picture"/>
+                <h3>Build Custom Guitar</h3>
+                <p>We will design and custom build a guitar to your desires and wants</p>
+            </div>
+        </section>
+
+
+        <section id="iframe-container">
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/kyB66J2NhW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section id="prices-container">
+            <div class="product-container">
+                <div class="product-name">
+                    <h4>Set-Up</h4>
+                </div>
+                <h5>* $20-$40</h5>
+                <ol>
+                    <li>Truss Rod Adjustment</li>
+                    <li>String Height Adjustment</li>
+                    <li>Pickup Height Adjustment</li>
+                    <li>In-Depth Cleaning</li>
+                </ol>
+                <button class="product-button">Select</button>
+            </div>
+
+            <div class="product-container">
+                <div class="product-name">
+                    <h4>Repair</h4>
+                </div>
+                <h5>* $60-$120</h5>
+                <ol>
+                    <li>Body Repair</li>
+                    <li>Exchange Strings</li>
+                    <li>Adjust Necessary Parts</li>
+                    <li>In-Depth Cleaning</li>
+                </ol>
+                <button class="product-button">Select</button>
+            </div>
+
+            <div class="product-container">
+                <div class="product-name">
+                    <h4>Build</h4>
+                </div>
+                <h5>* $200+</h5>
+                <ol>
+                    <li>Build Entire Body</li>
+                    <li>Attach Desired Parts</li>
+                    <li>Attach New Strings</li>
+                    <li>Adjust and Retune</li>
+                </ol>
+                <button class="product-button">Select</button>
+            </div>
+        </section>
+
+        <div id="notice-container">
+            <p>*Prices may adjust and vary to specific needs<p>
+        </div>
+
+        <section id="location-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1459209.5218547212!2d-111.84378946874999!3d44.41226410000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5351f22bebc76153%3A0xe9bd77d31dcc74bf!2sYellowstone%20Caldera!5e0!3m2!1sen!2sus!4v1571942558586!5m2!1sen!2sus" width="300" height="250" frameborder="0" allowfullscreen=""></iframe>
+        </section>
+      
+    </main>
+      
+    <footer>
+    
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <p>Copyright 2016, Jimi's Guitar Shop</p>
+
+    </footer>
+
+</body>
+
+</html>

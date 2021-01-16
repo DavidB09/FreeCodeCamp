@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FreeCodeCamp_CSS_SurveyForm.css">
+    <title>Survey Form</title>
+    <meta name="author" content="David Brunner">
+    <meta name="keywords" content="Survey Form, Information, Shipping">
+    <meta name="description" content="A survey form for shipping returns.">
+</head>
+
+<body>
+
+    <header>
+        <h1>Shipping Return Survey</h1>
+
+        <p>Please enter your information and details about the package below</p>
+    </header>
+
+    <main>
+
+        <form id="main-form">
+
+            <section id="personal-info" class="survey-container">
+
+                <div class="info-header">
+                    <h2>Personal Information</h2>
+                </div> 
+
+                <div class="info-container">
+                    <label class="info-label" for="name-input">Name:</label>
+                    <input class="info-input" id="name-input" type="text" name="personal-name" placeholder="Enter name on package" required>
+                </div>
+
+                <div class="info-container">
+                    <label class="info-label" for="email-input">Email:</label>
+                    <input class="info-input" id="email-input" type="email" name="personal-email" placeholder="Enter email" required>
+                </div>
+        
+                <div class="info-container">
+                    <label class="info-label" for="address-input">Address:</label>
+                    <input class="info-input" id="address-input" type="text" name="personal-address" placeholder="Enter address" required>
+                </div>
+        
+                <div class="info-container">
+                    <label class="info-label" for="zipcode-input">Zip-Code:</label>
+                    <input class="info-input" id="zipcode-input" type="text" name="personal-zipcode" placeholder="Enter zipcode" required> 
+                </div>
+
+            </section>
+
+            <section id="package-info" class="survey-container">
+
+                <div class="info-header">
+                    <h2>Package Information</h2>
+                </div>
+        
+                <div class="info-container">
+                    <label class="info-label" for="ID-input">Item Number:</label>
+                    <input class="info-input" id="ID-input" type="text" name="package-ID" placeholder="Enter specific item number" required>
+                </div>
+        
+                <div class="info-container">
+                    <label class="info-label" for="number-input">Number of Items Ordered:</label>
+                    <input class="info-input" id="number-input" type="number" name="package-number" min="1" max="60" placeholder="Number" required>
+                </div>
+        
+                <fieldset form="main-form">
+                    <legend class="info-label">Condition of Package Arrival:</legend>
+                    <label class="condition-label" for"perfect-arrival">
+                        <input class="info-input arrival-input" id="perfect-arrival" type="radio" name="package-arrival" value="1">Perfect
+                    </label>
+                    <label class="condition-label" for"damaged-arrival">
+                        <input class="info-input arrival-input" id="damaged-arrival" type="radio" name="package-arrival" value="2">Damaged
+                    </label>
+                    <label class="condition-label" for"unarrived-arrival">
+                        <input class="info-input arrival-input" id="unarrived-arrival" type="radio" name="package-arrival" value="3">Not Arrived
+                    </label>
+                </fieldset>
+        
+                <fieldset form="main-form">
+                    <legend class="info-label">Please State Reasons for Return (Select 1 or more):</legend>
+                    <label class="reasons-label" for="version-reasons">
+                        <input class="info-input" id="version-reasons" type="checkbox" name="package-reasons" value="1">Wrong Version/Color
+                    </label>
+                    <label class="reasons-label" for="size-reasons">
+                        <input class="info-input" id="size-reasons" type="checkbox" name="package-reasons" value="2">Wrong Size/Fit
+                    </label>
+                    <label class="reasons-label" for="issues-reasons">
+                        <input class="info-input" id="issues-reasons" type="checkbox" name="package-reasons" value="3">Issues/Defects
+                    </label>
+                    <label class="reasons-label" for="wrong-reasons">
+                        <input class="info-input" id="wrong-reasons" type="checkbox" name="package-reasons" value="4">Wrong Order
+                    </label>
+                    <label class="reasons-label" for="use-reasons">
+                        <input class="info-input" id="use-reasons" type="checkbox" name="package-reasons" value="5">No Use
+                    </label>
+                </fieldset>
+            
+                <div class="info-container user-container">
+                    <label class="info-label" for="contact-input">Please Tell Us How We Should Send You Extra Information:</label>         
+                    <select id="contact-input" name="package-contact" required>
+                        <option disabled selected value>Select an Option</option>
+                        <option value="regular">Send Regular Updates to Email</option>
+                        <option value="once">Call Once To Notify When Recieved</option>
+                        <option value="never">Don't Contact Me</option>
+                    </select>
+                </div>
+        
+                <div class="info-container user-container">
+                    <label class="info-label" for="package-comment">Have Any Comments Or Suggestions?</label>
+                    <textarea class="info-textarea" name="package-comment" placeholder="Please Enter Your Feedback Here..."></textarea>
+                </div>
+            
+                <button id="submit" type="submit" value="submit" required>Submit</button>
+    
+            </section>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

@@ -2,10 +2,11 @@ html {
     font-size: 62.5%; 
     overflow-y: scroll;
     scroll-behavior: smooth;
+    transition: 0.6 ease; 
 }
-  
+
 /* MAIN ELEMENTS */
-  
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,19 +18,19 @@ body {
     font-size: 1.5rem;
     text-align: center;
 }
-  
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
 }
-  
+
 figure {
     display: flex; 
     justify-content: center; 
 }
-  
+
 img {
     position: relative;
     height: auto;
@@ -38,13 +39,13 @@ img {
     border: outset gray 1rem;
     border-radius: 5%;
 }
-  
+
 figcaption {
     padding-top: 0.5rem;
     color: #373638;
     font-size: 2rem;
 }
-  
+
 blockquote {
     display: flex; 
     flex-direction: column; 
@@ -55,38 +56,38 @@ blockquote {
     font-size: 1.6rem;
     text-align: left;
 }
-  
+
 h1 {
     margin-top: 2rem;
     font-size: 4rem;
 }
-  
+
 h2 {
     margin: 0; 
     font-family: Brush Script MT;
     font-size: 10rem;
 }
-  
+
 h3 {
     font-size: 3rem; 
 }
-  
+
 footer p {
     padding-bottom: 8rem;
     font-size: 1.8rem; 
 }
-  
+
 footer a {
     color: #ff0000;
     text-decoration: none; 
 }
-  
+
 footer a:visited {
     color: #da5b33;
 }
-  
+
 /* CLASSES */
-  
+
 .header-p {
     display: flex; 
     justify-content: center;
@@ -111,14 +112,14 @@ footer a:visited {
     content: " to hear music)"; 
     color: #a7a798;
 }
-  
+
 .circle {
     height: 200px;
     width: 300px;
     background-color: transparent; 
     perspective: 1000px;
 }
-  
+
 .circle-inner {
     position: relative;
     height: 100%;
@@ -127,14 +128,14 @@ footer a:visited {
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-  
+
 .circle:hover .circle-inner {
     transform: rotateY(180deg);
 }
-  
+
 /* Source Code for amazing vinyl record design is from Ana Tudor */
 /* Link: https://codepen.io/thebabydino/pen/HjJlL */
-  
+
 .circle-front, .circle-back {
     display: flex; 
     justify-content: center; 
@@ -149,18 +150,18 @@ footer a:visited {
     border-radius: 50%; 
     backface-visibility: hidden;
 }
-  
+
 .circle-front {
     padding: 1rem; 
     font-size: 3rem; 
 }
-  
+
 .circle-back {
     padding: 1.5rem; 
     font-size: 1.5rem; 
     transform: rotateY(180deg);
 }
-  
+
 .circle-year {
     display: flex; 
     justify-content: center; 
@@ -172,14 +173,14 @@ footer a:visited {
     border: solid 1px #d9a388;
     border-radius: 50%;
 }
-  
+
 .circle-year h3 {
     position: relative; 
     bottom: 2rem;
 }
-  
+
 /* IDS */ 
-  
+
 #img-background {
     width: 1200px; 
     padding: 25px;
@@ -189,7 +190,7 @@ footer a:visited {
     background-position: center;
     border-radius: 2%; 
 }
-  
+
 #tribute-info {
     display: grid;
     grid-template-columns: 1fr, 1fr;
@@ -197,7 +198,7 @@ footer a:visited {
     width: 100%;
     padding: 1.7rem 0 7.5rem 0 ; 
 }
-  
+
 #two-years {
     display: flex; 
     flex-direction: column; 
@@ -206,7 +207,7 @@ footer a:visited {
 #two-years h3 {
     margin-bottom: 0rem; 
 }
-  
+
 /* Individual Circles */
 #circle-1 {
     grid-column: 1;
@@ -215,14 +216,14 @@ footer a:visited {
     height: 20rem;
     width: 20rem;
 }
-  
+
 #circle-2 {
     grid-column: 2;
     grid-row: 2;
     height: 20.5rem;
     width: 20.5rem;
 }
-  
+
 #circle-3 {
     grid-column: 1;
     grid-row: 3;
@@ -230,14 +231,14 @@ footer a:visited {
     height: 20rem;
     width: 20rem;
 }
-  
+
 #circle-4 {
     grid-column: 2;
     grid-row: 4;
     height: 20.5rem;
     width: 20.5rem;
 }
-  
+
 #circle-5 {
     grid-column: 1;
     grid-row: 5;
@@ -245,14 +246,14 @@ footer a:visited {
     height: 20rem;
     width: 20.2rem;
 }
-  
+
 #circle-6 {
     grid-column: 2;
     grid-row: 6;
     height: 20rem;
     width: 20rem;
 }
-  
+
 #circle-7 {
     grid-column: 1;
     grid-row: 7;
@@ -260,14 +261,14 @@ footer a:visited {
     height: 22.5rem;
     width: 22.5rem;
 }
-  
+
 #circle-8 {
     grid-column: 2;
     grid-row: 8;
     height: 19rem;
     width: 19rem;
 }
-  
+
 #circle-9 {
     grid-column: 1;
     grid-row: 9;
@@ -275,14 +276,14 @@ footer a:visited {
     height: 19rem;
     width: 19rem;
 }
-  
+
 #circle-10 {
     grid-column: 2;
     grid-row: 10;
     height: 20rem;
     width: 20rem;
 }
-  
+
 #circle-11 {
     grid-column: 1;
     grid-row: 11;
@@ -290,14 +291,14 @@ footer a:visited {
     height: 22rem;
     width: 22rem;
 }
-  
+
 #circle-12 {
     grid-column: 2;
     grid-row: 12;
     height: 18rem;
     width: 18rem;
 }
-  
+
 #circle-13 {
     grid-column: 1;
     grid-row: 13;
@@ -305,30 +306,38 @@ footer a:visited {
     height: 20rem;
     width: 20rem;
 }
-  
+
 #circle-14 {
     grid-column: 2;
     grid-row: 14;
     height: 20rem;
     width: 20rem;
 }
-  
+
 /* MEDIA QUERY */ 
-  
-@media (max-width: 450px) {
+
+@media (max-width: 550px) {
     html {
-      font-size: 50%; 
-      overflow-y: scroll;
-      overflow-x: hidden;
+        font-size: 50%; 
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .circle {
+        padding-bottom: 5rem; 
+    }
+
+    .header-p {
+        flex-direction: column; 
+    }
+
+    .header-p a {
+        margin: 1rem; 
     }
 
     #tribute-info {
-      display: flex; 
-      flex-direction: column;  
-      align-items: center; 
-    }
-    
-    .circle {
-      padding-bottom: 5rem; 
+        display: flex; 
+        flex-direction: column;  
+        align-items: center; 
     }
 }

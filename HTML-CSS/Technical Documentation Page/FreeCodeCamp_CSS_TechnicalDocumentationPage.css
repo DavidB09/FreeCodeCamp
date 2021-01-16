@@ -1,0 +1,301 @@
+html {
+    font-size: 62.5%; 
+    scroll-behavior: smooth; 
+    transition: 0.5s; 
+}
+
+/* MAIN ELEMENTS */
+
+body {
+    color: #8c06c9;
+    background-color: #fff;
+    font-family: Big Caslon, Bookman;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    color: #3b0a70;
+    font-size: 2.4rem;
+    font-weight: normal; 
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 30rem; 
+    padding-bottom: 2rem;
+    border-right: 0.2rem #3b0a70 solid;
+    border-bottom: 0.2rem #3b0a70 solid;
+}
+
+nav {
+    border-bottom: 0.1rem #3b0a70 solid;
+}
+
+nav h1 {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+nav li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top: 0.1rem #3b0a70 solid;
+}
+
+nav a {
+    display: block;
+    padding: 0.8rem 3.6rem;
+    color: #8c06c9;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #3b0a70;
+    background-color: #dacfe6;
+}
+
+main {
+    position: absolute;
+    margin-left: 35rem;
+    margin-bottom: 10rem;
+    margin-right: 4.5rem;
+}
+
+main h2 {
+    margin: 0;
+    padding-top: 1rem;
+    text-align: left;
+}
+
+main div {
+    margin-left: 5px;
+}
+
+main ul {
+    list-style-type: circle;
+}
+
+code {
+    display: block;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: #d6ccdb;
+    line-height: 1.5;
+    transition: all 0.4s ease-in-out; 
+}
+
+code:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10), 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Classes */
+
+.visible {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.stripe {
+    width: 55%; 
+    height: 2px; 
+    margin-top: -3px; 
+    margin-bottom: -3px;
+    background-color: #3b0a70;
+    border-radius: 15%; 
+}
+
+.night {
+    top: 1px !important; 
+    right: 35px !important;
+    font-size: 22px !important; 
+}
+
+body.darkmode {
+    color: #fff;
+    background-color: #260747; 
+}
+
+body.darkmode h1 {
+    color: #b069ff; 
+}
+
+body.darkmode h2 {
+    color: #b069ff; 
+}
+
+body.darkmode header {
+    border-right: 0.2rem #5b10ad solid;
+    border-bottom: 0.2rem #5b10ad solid;
+}
+
+body.darkmode nav {
+    border-bottom: 0.1rem #5b10ad solid;
+}
+
+body.darkmode nav li {
+    border-top: 0.1rem #5b10ad solid;
+}
+
+body.darkmode nav li a {
+    color: #fff; 
+}
+
+body.darkmode nav li a:hover {
+    background-color: #5b10ad; 
+}
+
+body.darkmode code {
+    color: #7f2fd6; 
+}
+
+body.darkmode a {
+    color: #5e94ff; 
+}
+
+body.darkmode #toggle-container {
+    background-color: #5b10ad; 
+}
+
+body.darkmode #toggle-container:hover {
+    background-color: #d6ccdb; 
+}
+
+/* IDS */
+
+#toggle-container {
+    display: none; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    width: 55px; 
+    height: 40px; 
+    margin: 0 auto; 
+    border: 0.1rem #3b0a70 solid;
+    border-radius: 8%; 
+    transition: 0.2s; 
+}
+
+#toggle-container:hover {
+    background-color: #d6ccdb; 
+    cursor: pointer; 
+}
+
+#darkmode-section {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+#darkmode-section h2 {
+    margin: 1rem 0; 
+}
+
+#darkmode-container {
+    position: relative; 
+    display: inline-block; 
+    width: 60px;
+    height: 34px;
+    margin-bottom: 1rem;
+}
+
+#slider {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px; 
+}
+
+#symbol {
+    position: absolute; 
+    top: -1px;
+    right: 7px; 
+    font-size: 25px; 
+}
+
+#circle {
+    position: absolute; 
+    bottom: 4px; 
+    left: 4px; 
+    height: 26px; 
+    width: 26px;
+    background-color: #fff; 
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 50%; 
+    }
+
+    header {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-right: 0rem;
+        z-index: 1;
+    }
+
+    nav {
+        border: none; 
+    }
+
+    nav ul {
+        display: none; 
+        height: 21rem;
+        border: 0.1rem #3b0a70 solid;
+    }
+
+    nav li {
+        border: none; 
+        text-align: center;
+    }
+
+    main {
+        position: relative;
+        margin: 0;
+    }
+
+    main h2 {
+        text-align: center;
+    }
+
+    body.darkmode header {
+        border-right: 0rem;
+    }
+
+    body.darkmode nav {
+        border: none; 
+    }
+
+    body.darkmode nav li {
+        border: none; 
+    }
+
+    body.darkmode nav ul {
+        border: 0.2rem #3b0a70 solid; 
+    }
+
+    #toggle-container {
+        display: flex; 
+        margin-bottom: 2.5rem; 
+    }
+}

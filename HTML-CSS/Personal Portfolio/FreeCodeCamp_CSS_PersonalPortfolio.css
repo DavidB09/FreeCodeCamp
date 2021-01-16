@@ -1,0 +1,278 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    transition: 0.5s; 
+}
+
+:root {
+    --light-blue: #0a98ad;
+    --dark-orange: #bf3706;
+    --light-orange: #fa4d0f; 
+    --rich-purple: #4f0333;
+    --dark-gray: #303336; 
+}
+
+/* MAIN ELEMENTS */
+
+body {
+    margin: 0; 
+    color: 000; 
+    font-family: "Malgun Gothic", sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;   
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end; 
+    width: 100%;
+    height: 5.5rem;
+    background-color: var(--light-blue, blue);
+    box-shadow: 0 0.2rem 0 rgba(15, 10, 122, 0.7);
+    z-index: 1; 
+}
+
+ul {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 4rem 0 0; 
+    padding: 0; 
+}
+
+li {
+    display: flex;
+    align-items: center;
+    list-style: none; 
+    transition: 0.4s;
+}
+
+li:hover {
+    background-color: var(--rich-purple, purple);
+}
+
+a {
+    color: #fff; 
+    text-decoration: none; 
+}
+
+nav a {
+    padding: 1.5rem;
+    transition: 0.4s; 
+}
+
+nav a:hover {
+    font-size: 2.1rem;
+}
+
+h1 {
+    color: var(--dark-orange, orange);
+    font-size: 5rem; 
+}
+
+h2 {
+font-size: 3.8rem; 
+width: 80%; 
+}
+
+span {
+    color: var(--light-orange, orange);
+    opacity: 0; 
+    transition: 0.3s ease-out;
+}
+
+iframe {
+    height: 45rem;
+    width: calc(100% - 4rem); 
+    padding-top: 2rem;
+    border: none; 
+}
+
+footer {
+    display: flex; 
+    justify-content: space-between; 
+    height: 5vh; 
+}
+
+footer p {
+    padding: 0 2rem; 
+}
+
+footer a {
+    color: var(--light-blue, blue);
+}
+
+/* CLASSES */
+
+.project-tile {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-width: 15rem;
+    background-color: var(--light-blue, blue);
+    border-radius: 0.5rem;
+}
+
+.project-title {
+    padding: 1.5rem;        
+}
+
+.project-title:hover span {
+    opacity: 100%; 
+}
+
+.profile-link {
+    color: var(--light-blue, blue);
+    transition: 0.3s ease-out;
+}
+
+.profile-link:hover {
+    color: var(--dark-orange, orange);
+    transform: translateY(0.4rem);
+}
+
+/* IDS */
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(55deg, var(--dark-gray, gray) 0%, #000 100%);
+    text-align: center;
+    border-bottom: solid var(--dark-orange, orange) 0.5rem;
+}
+
+#welcome-section p {
+    color: white;
+    font-family: "Segoe Print"; 
+    font-size: 2.5rem;
+}
+
+#projects {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+    background-color: var(--rich-purple, purple);
+    text-align: center;
+    border-bottom: solid var(--dark-orange, orange) 0.5rem;
+}
+
+#projects h2 {
+    max-width: 100rem;
+    margin: 0; 
+    padding-bottom: 2rem;
+    color: var(--light-blue, blue);
+    border-bottom: 0.3rem var(--light-blue, blue) dotted;
+}
+
+#projects-grid { 
+    display: grid;
+    grid-auto-flow: column; 
+    grid-gap: 2rem; 
+    width: 85%; 
+    max-width: 135rem;
+    margin: 13rem auto 4rem auto;
+}
+
+#all-projects {
+    width: 60%; 
+    margin: 0 auto; 
+    padding: 1.3rem;    
+    background-color: var(--light-blue, blue); 
+    border-radius: 5px;
+    transition: background-color 0.4s ease-out;
+}
+
+#all-projects:hover {
+    background-color: var(--dark-orange, orange);
+}
+
+#all-projects:hover i {
+    transform: translateX(0.3rem);
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: var(--dark-gray);
+    color: #fff;
+    text-align: center; 
+    border-bottom: solid var(--dark-orange, orange) 0.5rem;
+}
+
+#contact h2 {
+    color: var(--dark-orange);
+}
+
+#contact div { 
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 55rem;
+    padding: 2.5rem 5rem; 
+    font-size: 2.2rem;
+}
+
+#contact-question {
+    font-family: "Segoe Print";
+    font-size: 2.3rem;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 800px) {
+    html {
+        font-size: 55%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        margin: 0; 
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3rem; 
+    }
+
+    p {
+        font-size: 1.9rem; 
+    }
+
+    footer {
+        font-size: 1.6rem;
+    }
+
+    #projects {
+        height: auto;
+        padding: 8rem 0rem; 
+    }
+
+    #projects-grid { 
+        display: flex;
+        flex-direction: column;
+        max-width: 65%; 
+    }
+
+    #contact {
+        padding: 0 3rem; 
+    }
+}
