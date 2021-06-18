@@ -1,0 +1,194 @@
+body {
+  margin: 0; }
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2; }
+
+#container {
+  display: grid;
+  grid-template-rows: 25% repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+  grid-template-areas: "display display display display display" "add subtract multiply divide equal" "one two three undo undo" "four five six clear clear" "seven eight nine clear clear" "zero zero period clear clear";
+  justify-items: stretch;
+  align-items: stretch;
+  height: 50vh;
+  width: 40vh;
+  padding: 30px;
+  background-color: #316879;
+  border-radius: 10px; }
+
+#display {
+  grid-area: display;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  padding-right: 15px;
+  background-color: #ced7d8;
+  color: #000;
+  font-size: 45px;
+  font-weight: bold;
+  border-radius: 5px;
+  overflow: scroll; }
+  #display p {
+    margin: 0;
+    word-break: break-all; }
+
+#button-add {
+  height: 100%;
+  grid-area: add;
+  background-color: #7fe7dc;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-subtract {
+  height: 100%;
+  grid-area: subtract;
+  background-color: #7fe7dc;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-multiply {
+  height: 100%;
+  grid-area: multiply;
+  background-color: #7fe7dc;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-divide {
+  height: 100%;
+  grid-area: divide;
+  background-color: #7fe7dc;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-equal {
+  height: 100%;
+  grid-area: equal;
+  background-color: #7fe7dc;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-one {
+  height: 100%;
+  grid-area: one;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-two {
+  height: 100%;
+  grid-area: two;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-three {
+  height: 100%;
+  grid-area: three;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-four {
+  height: 100%;
+  grid-area: four;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-five {
+  height: 100%;
+  grid-area: five;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-six {
+  height: 100%;
+  grid-area: six;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-seven {
+  height: 100%;
+  grid-area: seven;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-eight {
+  height: 100%;
+  grid-area: eight;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-nine {
+  height: 100%;
+  grid-area: nine;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-zero {
+  height: 100%;
+  grid-area: zero;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-period {
+  height: 100%;
+  grid-area: period;
+  background-color: #ced7d8;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-undo {
+  height: 100%;
+  grid-area: undo;
+  background-color: #f47a60;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+#button-clear {
+  height: 100%;
+  grid-area: clear;
+  background-color: #f47a60;
+  font-size: 25px;
+  font-weight: bold;
+  border: none; }
+
+@media (max-width: 750px) {
+  #container {
+    width: 75%;
+    height: 40%;
+    margin: auto 10px; }
+  #display {
+    padding: 0px; } }

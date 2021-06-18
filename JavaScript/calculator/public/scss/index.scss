@@ -1,0 +1,82 @@
+body {
+    margin: 0; 
+}
+
+#root {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100vw; 
+    background-color: #f2f2f2; 
+}
+
+#container {
+    display: grid; 
+    grid-template-rows: 25% repeat(5, 1fr); 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-row-gap: 15px; 
+    grid-column-gap: 15px; 
+    grid-template-areas:
+        "display display display display display"
+        "add subtract multiply divide equal"
+        "one two three undo undo"
+        "four five six clear clear"
+        "seven eight nine clear clear"
+        "zero zero period clear clear"; 
+    justify-items: stretch; 
+    align-items: stretch; 
+    height: 50vh; 
+    width: 40vh; 
+    padding: 30px; 
+    background-color: #316879; 
+    border-radius: 10px; 
+}
+
+#display {
+    grid-area: display; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    align-items: end; 
+    padding-right: 15px; 
+    background-color: #ced7d8; 
+    color: #000; 
+    font-size: 45px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    overflow: scroll; 
+
+    p {
+        margin: 0; 
+        word-break: break-all; 
+    }
+}
+
+$buttons: add #7fe7dc, subtract #7fe7dc, multiply #7fe7dc, divide #7fe7dc, equal #7fe7dc, 
+    one #ced7d8, two #ced7d8, three #ced7d8, four #ced7d8, five #ced7d8, 
+    six #ced7d8, seven #ced7d8, eight #ced7d8, nine #ced7d8, zero #ced7d8, 
+    period #ced7d8, undo #f47a60, clear #f47a60; 
+
+@each $button, $color in $buttons {
+    #button-#{$button} {
+        height: 100%; 
+        grid-area: $button; 
+        background-color: $color; 
+        font-size: 25px; 
+        font-weight: bold;
+        border: none;
+    }; 
+}; 
+
+@media (max-width: 750px) {
+    #container {
+        width: 75%; 
+        height: 40%; 
+        margin: auto 10px; 
+    }
+
+    #display {
+        padding: 0px; 
+    }
+}
