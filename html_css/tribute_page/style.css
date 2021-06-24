@@ -184,7 +184,7 @@ footer a:visited {
 #img-background {
     width: 1200px; 
     padding: 25px;
-    background-image: url("Assets/Wood\ Background.jpg");
+    background-image: url("assets/images/wood_background.jpg");
     background-repeat: no-repeat; 
     background-size: 100% 100%; 
     background-position: center;
