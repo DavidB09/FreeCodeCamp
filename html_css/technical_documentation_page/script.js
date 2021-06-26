@@ -1,28 +1,24 @@
-const UL = document.querySelector("ul"); 
+const navigationMenu = document.querySelector("ul"); 
 
-document.getElementById("toggle-container").addEventListener('click', event => {
-    if(UL.classList == "visible") {
-        UL.classList.remove("visible"); 
-    } else {
-        UL.className = "visible";
-    }
+document.getElementById("toggle-container").addEventListener('click', () => {
+    navigationMenu.classList.toggle('visible'); 
 });
 
-const BODY = document.querySelector("body"); 
-const SYMBOL = document.getElementById("symbol"); 
+const documentBody = document.querySelector("body"); 
+const colorModeSymbol = document.getElementById("symbol"); 
 
-document.getElementById("darkmode-container").addEventListener('click', event2 => {
-    if (BODY.classList == "darkmode") {
-        BODY.classList.remove("darkmode"); 
+document.getElementById("darkmode-container").addEventListener('click', () => {
+    if (documentBody.classList == "darkmode") {
+        documentBody.classList.remove("darkmode"); 
         document.getElementById("circle").style.transform = "translateX(0px)"; 
         document.getElementById("slider").style.backgroundColor = "#ccc"; 
-        SYMBOL.innerText = "☽"; 
-        SYMBOL.classList.remove("night"); 
+        colorModeSymbol.innerText = "☽"; 
+        colorModeSymbol.classList.remove("night"); 
     } else {
-        BODY.className = "darkmode";
+        documentBody.className = "darkmode";
         document.getElementById("circle").style.transform = "translateX(26px)";
         document.getElementById("slider").style.backgroundColor = "#5b10ad"; 
-        SYMBOL.innerText = "☼"; 
-        SYMBOL.className = "night"; 
+        colorModeSymbol.innerText = "☼"; 
+        colorModeSymbol.className = "night"; 
     }
 }); 
