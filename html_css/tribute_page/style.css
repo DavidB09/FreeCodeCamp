@@ -97,22 +97,6 @@ footer a:visited {
     font-weight: bold;
 }
 
-.header-p a {
-    color: #ff0000;
-    text-decoration: none;
-    font-size: 1.5rem; 
-}
-
-.header-p a::before {
-    content: " ("; 
-    color: #a7a798;
-}
-
-.header-p a::after {
-    content: " to hear music)"; 
-    color: #a7a798;
-}
-
 .circle {
     height: 200px;
     width: 300px;
