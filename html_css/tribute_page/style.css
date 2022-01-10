@@ -5,7 +5,7 @@ html {
     transition: 0.6 ease; 
 }
 
-/* MAIN ELEMENTS */
+/* ELEMENT */
 
 body {
     display: flex;
@@ -22,8 +22,8 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
     align-items: center;
+    justify-content: center; 
 }
 
 figure {
@@ -86,12 +86,12 @@ footer a:visited {
     color: #da5b33;
 }
 
-/* CLASSES */
+/* CLASS */
 
 .header-p {
     display: flex; 
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding-top: 1rem;
     font-size: 2rem;
     font-weight: bold;
@@ -121,12 +121,12 @@ footer a:visited {
 /* Link: https://codepen.io/thebabydino/pen/HjJlL */
 
 .circle-front, .circle-back {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
     position: absolute;
-    width: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     height: 100%;
+    width: 100%;
     color: #d9d9ce; 
     background: repeating-radial-gradient(#141212, #141212 24px, #21201f 26px);
     background-size: 100% 100%; 
@@ -163,7 +163,7 @@ footer a:visited {
     bottom: 2rem;
 }
 
-/* IDS */ 
+/* ID */ 
 
 #img-background {
     width: 1200px; 
@@ -193,6 +193,7 @@ footer a:visited {
 }
 
 /* Individual Circles */
+
 #circle-1 {
     grid-column: 1;
     grid-row: 1;
