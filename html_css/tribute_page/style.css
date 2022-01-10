@@ -5,7 +5,7 @@ html {
     transition: 0.6 ease; 
 }
 
-/* ELEMENT */
+/**** ELEMENT ****/
 
 body {
     display: flex;
@@ -86,7 +86,7 @@ footer a:visited {
     color: #da5b33;
 }
 
-/* CLASS */
+/**** CLASS ****/
 
 .header-p {
     display: flex; 
@@ -163,7 +163,7 @@ footer a:visited {
     bottom: 2rem;
 }
 
-/* ID */ 
+/**** ID ****/ 
 
 #img-background {
     width: 1200px; 
@@ -299,7 +299,7 @@ footer a:visited {
     width: 20rem;
 }
 
-/* MEDIA QUERY */ 
+/**** MEDIA QUERY ****/ 
 
 @media (max-width: 550px) {
     html {
