@@ -1,20 +1,29 @@
 html {
     font-size: 62.5%; 
+    -webkit-transition: 0.5s ease; 
+    -o-transition: 0.5s ease; 
     transition: 0.5s ease; 
 }
 
-/* MAIN ELEMENTS */
+/**** ELEMENT ****/
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: column; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
     background-color: #c75d5d;
     font-family: Tahoma, Geneva;
     text-align: center;
 }
 
 section {
-    align-items: center; 
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
     height: auto;  
     margin: 2.5rem auto;
     padding-bottom: 1.5rem; 
@@ -36,6 +45,8 @@ p {
 }
 
 fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
     width: 70%; 
     margin: 1.5rem; 
@@ -43,6 +54,8 @@ fieldset {
 
 textarea {
     height: 4rem; 
+    -webkit-transition: 0.3s ease-out; 
+    -o-transition: 0.3s ease-out; 
     transition: 0.3s ease-out; 
 }
 
@@ -51,11 +64,16 @@ textarea:focus {
     padding-bottom: 4rem; 
 }
 
-/* CLASSES */
+/**** CLASS ****/
 
 .survey-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: column; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
 }
 
 .info-header {
@@ -65,15 +83,23 @@ textarea:focus {
 }
 
 .info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: column;
-    align-items: flex-start; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; 
     width: 70%; 
     margin: 1.5rem; 
 }
 
 .info-container input:focus {
-    box-shadow: 0 0 0.5rem 0.4rem rgba(125, 214, 255, 0.3); 
+    -webkit-box-shadow: 0 0 0.5rem 0.4rem rgba(125, 214, 255, 0.3);
+            box-shadow: 0 0 0.5rem 0.4rem rgba(125, 214, 255, 0.3); 
 }
 
 .info-label {  
@@ -89,13 +115,21 @@ textarea:focus {
     font-size: 1.5rem; 
     border: 0.1rem solid #adacac; 
     border-radius: 0.3rem; 
+    -webkit-transition: 0.1s; 
+    -o-transition: 0.1s; 
     transition: 0.1s; 
 }
 
 .condition-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
     margin: 0.5rem; 
     font-size: 1.5rem; 
 }
@@ -111,11 +145,15 @@ textarea:focus {
 }
 
 .user-container {
-    justify-content: center; 
-    align-items: center; 
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
 }
 
-/* IDS */
+/**** ID ****/
 
 #personal-info {
     max-width: 45rem; 
@@ -127,10 +165,6 @@ textarea:focus {
     min-width: 40rem;
 }
 
-#contact-input:focus:hover {
-    margin: 0 0 10rem 0; 
-}
-
 #submit {
     height: 4rem;
     width: 7rem;
@@ -138,19 +172,23 @@ textarea:focus {
     font-size: 1.5rem;
 }
 
-/* MEDIA QUERY */
+/**** MEDIA QUERY ****/
 
 @media (max-width: 650px) {
     fieldset {
-        width: 40%; 
+        width: auto; 
+        padding: 0; 
+        margin: 1.5rem 0; 
     }
 
     .info-container {
-        align-items: center; 
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; 
     }
 
     .reasons-label {
-        width: 8rem; 
+        width: 7.5rem; 
     }
 }
 

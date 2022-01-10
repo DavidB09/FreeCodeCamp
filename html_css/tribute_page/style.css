@@ -2,15 +2,24 @@ html {
     font-size: 62.5%; 
     overflow-y: scroll;
     scroll-behavior: smooth;
+    -webkit-transition: 0.6 ease;
+    -o-transition: 0.6 ease;
     transition: 0.6 ease; 
 }
 
 /**** ELEMENT ****/
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0;
     color: #a7a798;
     background-color: #003891;
@@ -20,15 +29,28 @@ body {
 }
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; 
 }
 
 figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: center; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
 }
 
 img {
@@ -47,8 +69,13 @@ figcaption {
 }
 
 blockquote {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: column; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
     width: 50rem;
     margin: 0 auto 4rem auto;
     padding: 1rem; 
@@ -89,9 +116,15 @@ footer a:visited {
 /**** CLASS ****/
 
 .header-p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 1rem;
     font-size: 2rem;
     font-weight: bold;
@@ -101,7 +134,8 @@ footer a:visited {
     height: 200px;
     width: 300px;
     background-color: transparent; 
-    perspective: 1000px;
+    -webkit-perspective: 1000px; 
+            perspective: 1000px;
 }
 
 .circle-inner {
@@ -109,12 +143,18 @@ footer a:visited {
     height: 100%;
     width: 100%;
     text-align: center;
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: -webkit-transform 0.8s;
+    -o-transition: transform 0.8s;
     transition: transform 0.8s;
-    transform-style: preserve-3d;
+    transition: transform 0.8s, -webkit-transform 0.8s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 }
 
 .circle:hover .circle-inner {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 /* Source Code for amazing vinyl record design is from Ana Tudor */
@@ -122,17 +162,25 @@ footer a:visited {
 
 .circle-front, .circle-back {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
     height: 100%;
     width: 100%;
     color: #d9d9ce; 
+    background: -o-repeating-radial-gradient(#141212, #141212 24px, #21201f 26px); 
     background: repeating-radial-gradient(#141212, #141212 24px, #21201f 26px);
     background-size: 100% 100%; 
     text-align: center; 
     border-radius: 50%; 
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
 }
 
 .circle-front {
@@ -143,16 +191,23 @@ footer a:visited {
 .circle-back {
     padding: 1.5rem; 
     font-size: 1.5rem; 
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); 
+            transform: rotateY(180deg);
 }
 
 .circle-year {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: center; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
     height: 12rem;
     width: 12rem;
     background: #b5ac9a;
-    box-shadow: 0 0 0 0.5rem #da5b33,
+    -webkit-box-shadow: 0 0 0 0.5rem #da5b33,
+      inset 0 0 0 5.3rem #da5b33;
+            box-shadow: 0 0 0 0.5rem #da5b33,
       inset 0 0 0 5.3rem #da5b33;
     border: solid 1px #d9a388;
     border-radius: 50%;
@@ -176,16 +231,24 @@ footer a:visited {
 }
 
 #tribute-info {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr, 1fr;
     grid-template-columns: 1fr, 1fr;
+    -ms-grid-rows: repeat(14, 1fr);
     grid-template-rows: repeat(14, 1fr); 
     width: 100%;
     padding: 1.7rem 0 7.5rem 0 ; 
 }
 
 #two-years {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: column; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
 }
 
 #two-years h3 {
@@ -195,105 +258,140 @@ footer a:visited {
 /* Individual Circles */
 
 #circle-1 {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 1;
     grid-row: 1;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     height: 20rem;
     width: 20rem;
 }
 
 #circle-2 {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 2;
     grid-row: 2;
     height: 20.5rem;
     width: 20.5rem;
 }
 
 #circle-3 {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 3;
     grid-row: 3;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     height: 20rem;
     width: 20rem;
 }
 
 #circle-4 {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 4;
     grid-row: 4;
     height: 20.5rem;
     width: 20.5rem;
 }
 
 #circle-5 {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 5;
     grid-row: 5;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     height: 20rem;
     width: 20.2rem;
 }
 
 #circle-6 {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 6;
     grid-row: 6;
     height: 20rem;
     width: 20rem;
 }
 
 #circle-7 {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 7;
     grid-row: 7;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     height: 22.5rem;
     width: 22.5rem;
 }
 
 #circle-8 {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 8;
     grid-row: 8;
     height: 19rem;
     width: 19rem;
 }
 
 #circle-9 {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 9;
     grid-row: 9;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     height: 19rem;
     width: 19rem;
 }
 
 #circle-10 {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 10;
     grid-row: 10;
     height: 20rem;
     width: 20rem;
 }
 
 #circle-11 {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 11;
     grid-row: 11;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     height: 22rem;
     width: 22rem;
 }
 
 #circle-12 {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 12;
     grid-row: 12;
     height: 18rem;
     width: 18rem;
 }
 
 #circle-13 {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 13;
     grid-row: 13;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
     height: 20rem;
     width: 20rem;
 }
 
 #circle-14 {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 14;
     grid-row: 14;
     height: 20rem;
     width: 20rem;
@@ -318,7 +416,10 @@ footer a:visited {
     }
 
     .header-p {
-        flex-direction: column; 
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; 
     }
 
     .header-p a {
@@ -326,8 +427,15 @@ footer a:visited {
     }
 
     #tribute-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex; 
-        flex-direction: column;  
-        align-items: center; 
+        -webkit-box-orient: vertical; 
+        -webkit-box-direction: normal; 
+            -ms-flex-direction: column; 
+                flex-direction: column;  
+        -webkit-box-align: center;  
+            -ms-flex-align: center;  
+                align-items: center; 
     }
 }

@@ -1,6 +1,8 @@
 html {
     font-size: 62.5%; 
     scroll-behavior: smooth; 
+    -webkit-transition: 0.5s; 
+    -o-transition: 0.5s; 
     transition: 0.5s; 
 }
 
@@ -56,6 +58,8 @@ nav a {
     padding: 0.8rem 3.6rem;
     color: #8c06c9;
     text-decoration: none;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -91,19 +95,29 @@ code {
     padding: 1.5rem;
     background-color: #d6ccdb;
     line-height: 1.5;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; 
 }
 
 code:hover {
-    transform: scale(1.02); 
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10), 0 4px 15px rgba(0, 0, 0, 0.15);
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02); 
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10), 0 4px 15px rgba(0, 0, 0, 0.15); 
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10), 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /**** CLASS ****/
 
 .visible {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .stripe {
@@ -175,14 +189,23 @@ body.darkmode #toggle-container:hover {
 
 #toggle-container {
     display: none; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: space-evenly; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
+    -webkit-box-pack: space-evenly; 
+        -ms-flex-pack: space-evenly; 
+            justify-content: space-evenly; 
     height: 40px; 
     width: 55px; 
     margin: 0 auto; 
     border: 0.1rem #3b0a70 solid;
     border-radius: 8%; 
+    -webkit-transition: 0.2s; 
+    -o-transition: 0.2s; 
     transition: 0.2s; 
 }
 
@@ -192,9 +215,16 @@ body.darkmode #toggle-container:hover {
 }
 
 #darkmode-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
 }
 
 #darkmode-section h2 {
@@ -234,6 +264,8 @@ body.darkmode #toggle-container:hover {
     width: 26px;
     background-color: #fff; 
     border-radius: 50%;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -295,6 +327,8 @@ body.darkmode #toggle-container:hover {
     }
 
     #toggle-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex; 
         margin-bottom: 2.5rem; 
     }
