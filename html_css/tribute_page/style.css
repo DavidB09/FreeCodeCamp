@@ -307,6 +307,11 @@ footer a:visited {
         overflow-x: hidden;
     }
 
+    blockquote {
+        width: 80%; 
+        margin: 0 0 5rem 0; 
+    }
+
     .circle {
         padding-bottom: 5rem; 
     }
