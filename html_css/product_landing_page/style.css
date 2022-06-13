@@ -49,6 +49,7 @@ nav {
     padding: 2rem 0 1rem 0; 
     background-color: #fff0e6; 
     border-bottom: solid 0.1rem black;
+    z-index: 999;
 }
 
 nav ul {

@@ -121,7 +121,7 @@ footer {
     -webkit-box-pack: justify; 
         -ms-flex-pack: justify; 
             justify-content: space-between; 
-    height: 5vh; 
+    height: auto; 
 }
 
 footer p {
@@ -215,7 +215,7 @@ footer a {
     -webkit-box-pack: center; 
         -ms-flex-pack: center; 
             justify-content: center; 
-    height: 100vh;
+    padding: 5rem 0;
     background-color: var(--rich-purple, purple);
     text-align: center;
     border-bottom: solid var(--dark-orange, orange) 0.5rem;
